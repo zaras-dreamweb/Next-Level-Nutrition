@@ -4,41 +4,20 @@
         "name": "12 Week Regular Program",
         "price": "1200",
         "image": "https://thumbs.dreamstime.com/b/healthy-lifestyle-diet-male-nutrition-concept-dieting-week-plan-man-hands-close-up-young-woman-writing-diet-plan-fresh-products-182053027.jpg",
-        "details": "How We Dream About Our Future"
+        "details": "You will be provided with moderate carb diet chart, and exercise according to need, more details on booking."
     },
     {
         "id": "2",
         "name": "24 Week Regular Program",
         "price": "2000",
         "image": "https://www.healthifyme.com/blog/wp-content/uploads/2020/01/gym-diet-cover-1.jpg",
-        "details": "How We Dream About Our Future"
+        "details": "You will be provided with low carb diet chart,cheat sheet, and exercise according to need,more details on booking."
     },
     {
         "id": "3",
         "name": "12 Week Couple Regular Program",
         "price": "2500",
         "image": "https://www.cdc.gov/nccdphp/dnpao/features/healthy-eating-tips/national-nutrition-month_456px.jpg",
-        "details": "How We Dream About Our Future"
-    },
-    {
-        "id": "4",
-        "name": "12 Week Regular Program",
-        "price": "1200",
-        "image": "https://c8.alamy.com/comp/2F6MYK4/woman-in-sport-clothes-holding-plate-with-fruits-and-vegetables-and-bottle-with-vitamins-vector-flat-cartoon-illustration-healthy-and-balanced-meal-full-of-nutrition-dietary-supplements-concept-2F6MYK4.jpg",
-        "details": "How We Dream About Our Future"
-    },
-    {
-        "id": "5",
-        "name": "24 Week Regular Program",
-        "price": "2000",
-        "image": "https://previews.123rf.com/images/petitelili/petitelili1604/petitelili160400013/55412604-set-of-cartoon-hand-drawn-pregnancy-nutrition-infographic-with-pregnant-woman-and-food-healthy-lifes.jpg",
-        "details": "How We Dream About Our Future"
-    },
-    {
-        "id": "6",
-        "name": "12 Week Couple Regular Program",
-        "price": "2500",
-        "image": "https://thumbs.dreamstime.com/z/young-people-play-sports-run-eat-right-concept-diet-plan-weight-control-vegetarianism-nutritionist-advice-healthline-nutrition-167473550.jpg",
-        "details": "How We Dream About Our Future"
+        "details": "You will be provided with moderate and low carb diet charts, and exercise according to need,more details on booking"
     }
 ]

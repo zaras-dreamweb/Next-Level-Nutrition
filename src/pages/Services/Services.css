@@ -1,0 +1,11 @@
+.services-container {
+    width: 100%;
+    padding-top: 10px;
+
+}
+
+.card-container {
+    color: rgb(241, 125, 15);
+    box-shadow: 5px 5px 14px #cfcfcf,
+        -5px -5px 14px #777777;
+}
