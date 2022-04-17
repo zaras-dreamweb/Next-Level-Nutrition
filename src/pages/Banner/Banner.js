@@ -7,6 +7,7 @@ import banner2 from '../../images/banner2.jpg'
 const Banner = () => {
     return (
         <div>
+
             <Carousel>
                 <Carousel.Item>
                     <img
@@ -14,9 +15,7 @@ const Banner = () => {
                         src={banner1}
                         alt="First slide"
                     />
-                    <Carousel.Caption>
-                        <h3 className='text-black'>Plan Your Meal Too!</h3>
-                    </Carousel.Caption>
+
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
