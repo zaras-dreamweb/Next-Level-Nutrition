@@ -13,22 +13,10 @@ const Services = () => {
     return (
         <div>
             <div>
-                <h1 className='services-title text-center mt-10 text-6xl '> My Services</h1>
+                <h1 className='services-title text-center text-warning font-bold mt-10 text-6xl'>My Service</h1>
                 <div className='services-container grid gap-x-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 '>
                     {
                         services.map(service => <p key={service.id}>
-                            {/* <Card className='card-container h-96 pt-10 ml-36 border-0 relative' style={{ width: '18rem' }}>
-                                <Card.Img className='h-60 w-40 p-6' variant="top" src={service.image} />
-                                <Card.Body>
-                                    <Card.Title> {service.name}</Card.Title>
-                                    <Card.Text>
-                                        {service.details}
-                                    </Card.Text>
-                                    <Card.Text><span>Service Charge:</span> ${service.price}</Card.Text>
-
-                                    <Button variant="outline-warning" className='bg-white absolute top-10 right-5'>CkeckOut</Button>{' '}
-                                </Card.Body>
-                            </Card> */}
                             <Card className="text-center card-container  ml-10 mr-10 relative">
                                 <Card.Header>
                                     <Card.Img className='h-60 w-40 p-6' variant="top" src={service.image} />

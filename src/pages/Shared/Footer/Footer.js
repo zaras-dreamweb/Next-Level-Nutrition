@@ -13,7 +13,7 @@ const Footer = () => {
             <footer>
                 <div className="bg-warning mt-40 py-8 pl-20 grid gap-x-10 grid-cols-1 md:grid-cols-3">
                     <div>
-                        <Card className='bg-warning border-0 ml-10 border-start' style={{ width: '50%' }}>
+                        <Card className='bg-warning border-0 ml-10 border-start border-3' style={{ width: '50%' }}>
                             <Card.Body>
                                 <Card.Title>Hi! I am Laura Styphen</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">I am a Nutritionist</Card.Subtitle>
@@ -24,7 +24,7 @@ const Footer = () => {
                         </Card>
                     </div>
                     <div>
-                        <Card className='bg-warning border-0 ml-10 border-start' style={{ width: '50%' }}>
+                        <Card className='bg-warning border-0 ml-10 border-start border-3' style={{ width: '50%' }}>
                             <Card.Body>
                                 <Card.Title>My Goals</Card.Title>
                                 <Card.Subtitle className="mb-2 text-muted">Make it Your GOAL too!</Card.Subtitle>
@@ -35,7 +35,7 @@ const Footer = () => {
                         </Card>
                     </div>
                     <div>
-                        <Card className='bg-warning border-5 ml-10 pb-4 ' style={{ width: '50%' }}>
+                        <Card className='bg-warning border-5 ml-10 pb-4 pt-4 pl-4' style={{ width: '50%' }}>
                             <Card.Body>
                                 <Card.Title>Contact Me</Card.Title>
                                 <Card.Text>
