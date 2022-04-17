@@ -24,7 +24,6 @@ const Header = () => {
                     <img style={{ height: '50px' }} src={logo} alt="" />
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/checkout">Checkout</Nav.Link>
                         <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                         <Nav.Link as={Link} to="/about">About</Nav.Link>
                         <Nav.Link as={Link} to="/register">Register</Nav.Link>

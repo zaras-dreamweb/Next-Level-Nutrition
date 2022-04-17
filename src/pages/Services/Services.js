@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Service from '../Service/Service';
 import './Services.css'
 
 const Services = () => {
@@ -16,21 +17,7 @@ const Services = () => {
                 <h1 className='services-title text-center text-warning font-bold mt-10 text-6xl'>My Service</h1>
                 <div className='services-container grid gap-x-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 '>
                     {
-                        services.map(service => <p key={service.id}>
-                            <Card className="text-center card-container  ml-10 mr-10 relative">
-                                <Card.Header>
-                                    <Card.Img className='h-60 w-40 p-6' variant="top" src={service.image} />
-                                </Card.Header>
-                                <Card.Body>
-                                    <Card.Title className='text-orange-700'>{service.name}</Card.Title>
-                                    <Card.Text className='text-black'>
-                                        {service.details}
-                                    </Card.Text>
-                                    <Card.Text><span className='text-black font-semibold'>Service Charge:</span > ${service.price}</Card.Text>
-                                    <Link to='/checkout'> <Button variant="outline-warning" className='bg-white absolute top-8 right-5'>CkeckOut</Button></Link>
-                                </Card.Body>
-                            </Card>
-                        </p>)
+                        services.map(service => <Service key={service.id} service={service}></Service>)
                     }
                 </div>
             </div>
