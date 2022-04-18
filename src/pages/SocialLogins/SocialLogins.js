@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
@@ -9,6 +10,11 @@ const SocialLogins = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
 
+    const navigate = useNavigate();
+
+    if (user || gitUser) {
+        navigate('/');
+    }
 
     useEffect(() => {
         if (error || gitError) {

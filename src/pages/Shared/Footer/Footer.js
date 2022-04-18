@@ -35,14 +35,14 @@ const Footer = () => {
                         </Card>
                     </div>
                     <div>
-                        <Card className='bg-warning border-5 ml-10 pb-4 pt-4 pl-4' style={{ width: '50%' }}>
+                        <Card className='bg-warning border-5 ' style={{ width: '50%' }}>
                             <Card.Body>
-                                <Card.Title>Contact Me</Card.Title>
+                                <Card.Title className='pt-4'>Contact Me</Card.Title>
                                 <Card.Text>
                                     <h5 className="card-title"><FontAwesomeIcon icon={faPhoneAlt}></FontAwesomeIcon> +347-209-5467</h5>
                                     <h5 className="card-title"><FontAwesomeIcon icon={faPhoneAlt}></FontAwesomeIcon> +347-209-5469</h5>
                                     <p className="card-text"><FontAwesomeIcon icon={faAt}></FontAwesomeIcon> www.nxt@gmail.com</p>
-                                    <div className='grid grid-cols-3 '>
+                                    <div className='grid grid-cols-3 pt-6 '>
                                         <Link className='pt-2' to='/'><img style={{ height: '30px' }} src={book} alt="" /></Link>
                                         <Link className='pt-1' to='/'><img style={{ height: '40px' }} src={insta} alt="" /></Link>
                                         <Link className='pt-1' to='/'><img style={{ height: '40px' }} src={tweet} alt="" /></Link>
