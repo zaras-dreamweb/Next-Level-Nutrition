@@ -44,14 +44,14 @@ const Register = () => {
 
     }
     const handlePasswordChange = event => {
-        const passwordRegex = /.{8,}/;
+        const passwordRegex = /.{6,}/;
         const validPassword = passwordRegex.test(event.target.value);
         if (validPassword) {
             setUserInfo({ ...userInfo, password: event.target.value })
             setErrors({ ...errors, passwordError: '' });
         }
         else {
-            setErrors({ ...errors, passwordError: 'Minimum 8 characters' });
+            setErrors({ ...errors, passwordError: 'Minimum 6 characters' });
             setUserInfo({ ...userInfo, password: '' })
 
         }

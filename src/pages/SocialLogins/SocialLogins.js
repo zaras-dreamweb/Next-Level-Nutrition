@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import google from '../../images/google.png'
 
 const SocialLogins = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
 
 
     useEffect(() => {
-        if (error) {
+        if (error || gitError) {
             toast(error?.message)
         }
-    }, [error]);
+    }, [error || gitError]);
 
     return (
         <div>
-            <button onClick={() => signInWithGoogle()} type="submit" className="btn btn-warning w-100 font-weight-bold mt-2">Sign Up With Google</button>
+            <button onClick={() => signInWithGoogle()} className="btn btn-warning w-100 font-weight-bold mt-2 ">Sign Up With Google</button>
+            <button onClick={() => signInWithGithub()} className="btn btn-warning w-100 font-weight-bold mt-2 ">Sign Up With GitHub</button>
+
             <ToastContainer></ToastContainer>
         </div>
     );
