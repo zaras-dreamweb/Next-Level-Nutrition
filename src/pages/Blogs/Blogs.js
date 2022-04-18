@@ -6,7 +6,7 @@ import './Blogs.css'
 const Blogs = () => {
     return (
         <div className='container text-center border-8 mt-4'>
-            <h2 className='mt-10 mb-10 text-black font-bold text-5xl '>Blogs page</h2>
+            <h2 className='mt-10 mb-10 text-black font-bold text-5xl '>Blogs Page</h2>
             <h2 className='text-warning font-extrabold'> Difference between Authorization and Authentication?</h2>
             <p className='pb-10 text-l font-bold '>Authentication is verifying or confirming someones identity, that who someone is. Whereas, Authorization means checking out, in which places that person has his access to. Usually Authentication is done before Authorization. Authorization depends on Authentication, like the login forms are used to Authenticate a user, to give him Authorization to access into.</p>
 
