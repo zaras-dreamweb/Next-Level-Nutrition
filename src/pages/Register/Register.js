@@ -16,19 +16,16 @@ const Register = () => {
         emailError: '',
         passwordError: '',
         confirmPasswordError: '',
-    })
+    });
 
-    const [
-        createUserWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    //  Email and password create user authorization
+    const [createUserWithEmailAndPassword, user, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     let errorElement;
 
-    if (errors) {
+    // error
+    if (errors || error) {
         errorElement = <p className='text-red-500'>{errors?.message}</p>
-    }
+    };
 
 
     const handleEmailChange = event => {
@@ -41,8 +38,7 @@ const Register = () => {
             setErrors({ ...errors, emailError: "Invalid Email" })
             setUserInfo({ ...userInfo, email: "" });
         }
-
-    }
+    };
     const handlePasswordChange = event => {
         const passwordRegex = /.{6,}/;
         const validPassword = passwordRegex.test(event.target.value);
@@ -53,9 +49,7 @@ const Register = () => {
         else {
             setErrors({ ...errors, passwordError: 'Minimum 6 characters' });
             setUserInfo({ ...userInfo, password: '' })
-
         }
-
     };
 
     const handleConfirmPasswordChange = event => {
@@ -67,15 +61,14 @@ const Register = () => {
         else {
             setErrors({ ...errors, confirmPasswordError: 'Passwords did not match' });
             setUserInfo({ ...userInfo, confirmPassword: '' })
-
         }
-    }
+    };
 
-
+    // form submit
     const handleFormSubmit = event => {
         event.preventDefault();
         createUserWithEmailAndPassword(userInfo.email, userInfo.password)
-    }
+    };
 
     const navigate = useNavigate();
     const location = useLocation();

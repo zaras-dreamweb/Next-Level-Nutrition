@@ -19,15 +19,17 @@ const Login = () => {
         confirmPasswordError: '',
     });
 
+    //  Email and password sign in user authorization
+    const [signInWithEmailAndPassword, user, hookError,] = useSignInWithEmailAndPassword(auth);
 
-    const [signInWithEmailAndPassword, user, loading, hookError,] = useSignInWithEmailAndPassword(auth);
-
+    //  Email and password reset authorization
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+    // error
     let errorElement;
     if (errors) {
         errorElement = <p className='text-red-500'>{errors?.message}</p>
-    }
+    };
 
 
     const handleEmailChange = event => {
@@ -40,8 +42,7 @@ const Login = () => {
             setErrors({ ...errors, emailError: "Invalid Email" })
             setUserInfo({ ...userInfo, email: "" });
         }
-
-    }
+    };
     const handlePasswordChange = event => {
         const passwordRegex = /.{6,}/;
         const validPassword = passwordRegex.test(event.target.value);
@@ -52,9 +53,7 @@ const Login = () => {
         else {
             setErrors({ ...errors, passwordError: 'Incorrect Password' });
             setUserInfo({ ...userInfo, password: '' })
-
         }
-
     };
 
 
@@ -68,22 +67,23 @@ const Login = () => {
         }
     }, [user]);
 
+    // hook error
     useEffect(() => {
         if (hookError) {
             toast(hookError?.message)
         }
     }, [hookError]);
 
-
+    // form submit
     const handleFormSubmit = event => {
         event.preventDefault();
         signInWithEmailAndPassword(userInfo.email, userInfo.password)
     }
-
+    // password reset sending message
     if (sending) {
-        return <p>Sending...</p>;
+        toast('sending');
     }
-
+    // password reset function
     const handlePasswordReset = async () => {
         if (userInfo.email) {
             await sendPasswordResetEmail(userInfo.email);
@@ -92,7 +92,6 @@ const Login = () => {
         else {
             toast('please enter your email')
         }
-
     }
 
 
@@ -109,6 +108,7 @@ const Login = () => {
                             <form onSubmit={handleFormSubmit}>
                                 <div className="form-group pb-3">
                                     <input onChange={handleEmailChange} type="email" placeholder="Your Email" className="form-control" required />
+
                                     {
                                         errors?.emailError && <p className='text-red-500'>{errors.emailError}</p>
                                     }
@@ -116,15 +116,19 @@ const Login = () => {
                                 </div>
                                 <div className="form-group pb-3">
                                     <input onChange={handlePasswordChange} type="password" placeholder="Your Password" className="form-control" required />
+
                                     {
                                         errors?.passwordError && <p className='text-red-500'>{errors.passwordError}</p>
                                     }
+
                                 </div>
                                 <div className="d-flex align-items-center justify-content-between">
                                     <div className="d-flex align-items-center"></div>
                                     <div>Forget Password?<button onClick={handlePasswordReset} className='btn btn-link text-decoration-none pb-2'>Reset Password</button></div>
                                 </div>
+
                                 {errorElement}
+
                                 <div className="pb-2">
                                     <button type="submit" className="btn btn-dark w-100 font-weight-bold mt-2">Login</button>
                                 </div>

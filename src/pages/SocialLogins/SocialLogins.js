@@ -18,8 +18,8 @@ const SocialLogins = () => {
 
     return (
         <div>
-            <button onClick={() => signInWithGoogle()} className="btn btn-warning w-100 font-weight-bold mt-2 ">Sign Up With Google</button>
-            <button onClick={() => signInWithGithub()} className="btn btn-warning w-100 font-weight-bold mt-2 ">Sign Up With GitHub</button>
+            <button onClick={() => signInWithGoogle()} className="btn btn-warning w-100 font-weight-bold mt-2 ">Sign In With Google</button>
+            <button onClick={() => signInWithGithub()} className="btn btn-warning w-100 font-weight-bold mt-2 ">Sign In With GitHub</button>
 
             <ToastContainer></ToastContainer>
         </div>
