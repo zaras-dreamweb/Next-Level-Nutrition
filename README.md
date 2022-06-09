@@ -6,7 +6,7 @@ This is my live site link [Live Site Link](https://next-level-nutrition-2028a.we
 
 1.My project is about a single Nutritionist, who provides healthy diet and exercise charts, according to clients.
 
-2.I used tailwind and react-bootstrap libraries.
+2.I used tailwind and react-bootstrap framework.
 
 3.My home page has 4 sections. Navbar, Banner, Service and Footer. 
 
